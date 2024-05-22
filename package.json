@@ -1,0 +1,21 @@
+{
+	"name": "taskmanager",
+	"version": "1.0.0",
+	"main": "server.js",
+	"license": "MIT",
+	"dependencies": {
+		"concurrently": "^8.2.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"email-validator": "^2.0.4",
+		"express": "^4.19.2",
+		"jsonwebtoken": "^9.0.2",
+		"morgan": "^1.10.0"
+	},
+	"scripts": {
+		"client": "yarn --cwd client dev",
+		"server": " nodemon  server/server.js",
+		"dev": "concurrently \"yarn server\" \"yarn client\"",
+		"postinstall": "yarn --cwd client add --dev vite"
+	}
+}
